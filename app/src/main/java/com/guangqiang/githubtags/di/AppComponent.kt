@@ -1,4 +1,4 @@
-package com.guangqiang.githubtags.inject
+package com.guangqiang.githubtags.di
 
 import com.guangqiang.githubtags.TagsApplication
 import dagger.Component
@@ -10,10 +10,11 @@ import javax.inject.Singleton
  * Created by eric on 10/1/2018.
  */
 @Singleton
-@Component(modules = arrayOf(
-        AndroidSupportInjectionModule::class,
-        AppModule::class
-))
+@Component(modules = [
+    AndroidSupportInjectionModule::class,
+    AppModule::class,
+    ActivityBindingModule::class]
+)
 interface AppComponent : AndroidInjector<TagsApplication> {
 
     @Component.Builder

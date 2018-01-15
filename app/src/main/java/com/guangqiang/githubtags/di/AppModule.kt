@@ -1,6 +1,7 @@
-package com.guangqiang.githubtags.inject
+package com.guangqiang.githubtags.di
 
 import android.content.Context
+import com.guangqiang.githubtags.Navigator
 import com.guangqiang.githubtags.TagsApplication
 import dagger.Module
 import dagger.Provides
@@ -14,5 +15,10 @@ class AppModule {
     @Provides
     fun provideContext(application: TagsApplication): Context {
         return application.applicationContext
+    }
+
+    @Provides
+    fun provideNavigator(): Navigator {
+        return Navigator()
     }
 }

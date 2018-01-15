@@ -1,6 +1,6 @@
 package com.guangqiang.githubtags
 
-import com.guangqiang.githubtags.inject.DaggerAppComponent
+import com.guangqiang.githubtags.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 import timber.log.Timber
